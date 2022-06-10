@@ -5,10 +5,7 @@ import androidx.room.Room
 import com.example.mvvm_jetpack_compose.data.data_source.NoteDatabase
 import com.example.mvvm_jetpack_compose.data.repository.NoteRepositoryImpl
 import com.example.mvvm_jetpack_compose.domain.repository.NoteRepository
-import com.example.mvvm_jetpack_compose.domain.use_case.AddNote
-import com.example.mvvm_jetpack_compose.domain.use_case.DeleteNote
-import com.example.mvvm_jetpack_compose.domain.use_case.GetNotes
-import com.example.mvvm_jetpack_compose.domain.use_case.NoteUseCases
+import com.example.mvvm_jetpack_compose.domain.use_case.*
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -42,7 +39,7 @@ object AppModule {
             getNotes = GetNotes(repository),
             deleteNote = DeleteNote(repository),
             addNote = AddNote(repository),
-//            getNote = GetNote(repository)
+            getNote = GetNote(repository)
         )
     }
 }

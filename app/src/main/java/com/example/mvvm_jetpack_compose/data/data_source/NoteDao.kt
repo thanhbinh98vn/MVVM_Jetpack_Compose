@@ -1,12 +1,10 @@
 package com.example.mvvm_jetpack_compose.data.data_source
 
-import androidx.room.Delete
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 import kotlinx.coroutines.flow.Flow
 import com.example.mvvm_jetpack_compose.domain.model.Note
 
+@Dao
 interface NoteDao {
 
     @Query("SELECT * FROM note")
